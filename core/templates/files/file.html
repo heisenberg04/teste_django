@@ -1,0 +1,36 @@
+
+{% load static %}
+
+{% block conteudo %}
+
+<h3>Lista de pessoas cadastradas:</h3>
+
+<table class="table table-striped" width="300px" border="1">
+   <tr>
+       <th>Nome</th>
+
+       <th>Sobrenome</th>
+
+   </tr>
+
+
+    {% for campo in object_list %}
+<tr>
+
+    <td>{{campo.cliente}}</td>
+
+
+    <td> {{campo.Sobrenome}}</td>
+
+</tr>
+    {%  empty    %}
+
+    {% endfor %}
+
+</table>
+
+
+    {% endblock %}
+
+
+<a href='cadastrar'><button>Cadastrar</button></a>
